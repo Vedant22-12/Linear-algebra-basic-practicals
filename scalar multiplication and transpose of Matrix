@@ -1,0 +1,17 @@
+M = [[12, 7, 3, 4],
+     [4, 5, 6, 1],
+     [7, 8, 9, 2]]
+
+# Find the scalar multiplication of M for a given scalar
+scalar = 2
+print("Scalar multiplication")
+print("Scalar =", scalar)
+multi = [[scalar * M[i][j] for j in range(4)] for i in range(3)]
+for row in multi:
+    print(row)
+
+# Find the transpose of matrix M
+result = [[M[j][i] for j in range(3)] for i in range(4)]
+print("\nTranspose of Matrix M")
+for r in result:
+    print(r)
