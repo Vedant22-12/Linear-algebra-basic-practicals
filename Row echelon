@@ -1,0 +1,16 @@
+def row_echelon_form(matrix):
+    for i, row in enumerate(matrix):
+        leading_entry = next((entry for entry in row if entry != 0), None)
+        if leading_entry:
+            row[:] = [entry / leading_entry for entry in row]
+            for k in range(i + 1, len(matrix)):
+                factor = matrix[k][i]
+                matrix[k] = [matrix[k][j] - factor * row[j] for j in range(len(row))]
+    return matrix
+
+# Example Matrix
+matrix = [[2, 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]]
+
+# Obtain and print the row echelon form of the matrix
+for row in row_echelon_form(matrix):
+    print(row)
