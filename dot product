@@ -1,0 +1,9 @@
+def addf(u, v, a, b):
+    return [a * u[i] + b * v[i] for i in range(len(v))]
+u = [2, 4, 6, 8, 10]
+print(u)
+v = [3, 6, 9, 12, 15]
+a = 2
+b = 4
+c = addf(u, v, a, b)
+print(c)
