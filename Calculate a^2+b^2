@@ -1,0 +1,14 @@
+def find_numbers_for_sum_of_squares(N):
+    a, b = 0, int(N**0.5)
+    while a <= b:
+        if a**2 + b**2 == N:
+            print(f"Numbers found: a = {a}, b = {b}")
+            return
+        a, b = a + 1, b - 1
+    print("No such numbers found.")
+
+try:
+    N = int(input("Enter a positive number N: "))
+    find_numbers_for_sum_of_squares(N)
+except ValueError:
+    print("Invalid input. Please enter a valid positive number.")
