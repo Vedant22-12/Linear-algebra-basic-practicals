@@ -1,0 +1,12 @@
+import numpy as np
+
+def orthogonal_projection(b, u):
+    if len(b) != len(u): raise ValueError("Vectors must have the same dimension.")
+    return (np.dot(b, u) / np.dot(u, u)) * u
+
+try:
+    b = np.array([float(x) for x in input("Enter vector b: ").split()])
+    u = np.array([float(x) for x in input("Enter vector u: ").split()])
+    print("Orthogonal Projection of b onto u:", orthogonal_projection(b, u))
+except ValueError:
+    print("Error: Please enter valid numerical values.")
