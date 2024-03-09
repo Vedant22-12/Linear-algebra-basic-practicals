@@ -1,0 +1,19 @@
+M = [[12, 7, 3, 4],
+     [4, 5, 6, 1],
+     [7, 8, 9, 2]]
+
+# Display M in matrix format
+print("Matrix M")
+for row in M:
+    print(row)
+
+# Display the rows and columns of the matrix M
+col = [[M[j][i] for j in range(len(M))] for i in range(len(M[0]))]
+print("Columns of matrix M")
+for c in col:
+    print(c)
+
+row = [[M[i][j] for j in range(len(M[i]))] for i in range(len(M))]
+print("Rows of matrix M")
+for r in row:
+    print(r)
